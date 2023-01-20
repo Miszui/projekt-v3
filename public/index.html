@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps!</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="//unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css" type="text/css">
+    <script src="//unpkg.com/leaflet-gesture-handling"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav id="menu">
+        <button id="toggle-menu">☰</button>
+        <ul id="togglable-menu">
+            <li class="js-menu-element">
+                <a href="/" title="Home">
+                    Home
+                </a>
+            </li>
+            <li class="js-menu-element"><a href="/#articles" title="Articles">Articles</a></li>
+            <li class="js-menu-element"><a href="/#contact" title="Contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <header>
+        <h1 id="js-page-header">Zadanie 1</h1>
+    </header>
+    <div>
+        Strona pozwala, na dodanie znacznika po podwójnym kliknięciu na mapę. Po prawej stronie pokarzą się szczegóły wybranej lokacji.
+    </div>
+
+    <section class="external-data">
+        <div id="map"></div>
+        <div id="weather-data">
+            <div class="js-loader">loading...</div>
+            <div class="js-first-run">
+                Po wybraniu lokacji tu pojwią się szczegóły.
+                <button id="js-fetch-weather">fetch weather!</button>
+                <button id="js-desc"> Desc </button>
+            </div>
+            <canvas id="js-graph"></canvas>
+            <div id="js-data">
+                <form>
+                    <label id="form-name">Name</label>
+                    <input type="text" id="form-desc"></input>
+                    <label id="form-coords"> Coords </label>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="cookie-message-bar">
+    Pożyczamy bezzwrotnie Ciasteczka
+    <button id="confirm-cookies-info">
+        Rozumiem, smacznego.
+    </button>
+</div>
+
+</body>
+</html>

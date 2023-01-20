@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+#toggle-menu {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  margin: 10px;
+
+  @media (min-width: $mobileBreakpoint) {
+    display: none;
+  }
+}
+
+#togglable-menu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+
+  @media (min-width: $mobileBreakpoint) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  li {
+    padding: 10px;
+    background-color: white;
+    width: 50%;
+
+    @media (min-width: $mobileBreakpoint) {
+      background-color: transparent;
+      min-width: auto;
+    }
+  }
+
+  &.visible {
+    display: block;
+  }
+}

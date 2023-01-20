@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+
+html {
+  font-family: $fontFamily;
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerFontFamily;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
